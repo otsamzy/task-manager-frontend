@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500&family=Sometype+Mono&display=swap');
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 10px;
+}
+
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --backgroundColor: aliceblue;
+    --white_one: white;
+    --voilet: rgb(104, 59, 228);
+    --redbg: rgba(240, 186, 186, 0.76);
+    --redColor: red;
+    --greenbg: rgba(194, 233, 194, 0.644);
+    --greenColor: green;
+    --ash_color: rgb(180, 180, 180, .2);
+}
+
+body {
+    background-color: var(--background_Color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main_container {
+    background-color: var(--white_one);
+    max-width: 700px;
+    width: 100%;
+
+    text-align: center;
+}
+
+.upper_section_con {
+    box-shadow: inset 3px 2px 2px rgba(216, 215, 215, 0.5), 1px 1px 5px rgba(112, 110, 110, 0.5);
+    margin-bottom: 2em;
+    padding: 2rem;
+    border-radius: 3px;
+
+}
+
+/* .upper_section_con {
+    position: relative;
+} */
+
+.alert_con {
+    position: relative;
+}
+
+.alert_msg {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-family: 'Sometype Mono',
+        monospace;
+    position: absolute;
+    top: -1.4rem;
+    /* left: 50%;
+    transform: translate(-50%); */
+    text-wrap: nowrap;
+    letter-spacing: 2px;
+    width: 100%;
+    visibility: hidden;
+}
+
+.alert_msg.red {
+    background-color: var(--redbg);
+    color: var(--redColor);
+    visibility: visible;
+
+}
+
+.alert_msg.green {
+    background-color: var(--greenbg);
+    color: var(--greenColor);
+    visibility: visible;
+}
+
+.items_left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+
+.items_left span svg {
+    stroke: var(--greenColor);
+    fill: var(--greenColor);
+    display: none;
+}
+
+.items_left.completed span svg {
+    display: block;
+}
+
+.items_left.completed .item_title {
+    text-decoration: line-through;
+    color: var(--redColor);
+}
+
+.titlepage {
+    font-size: 2rem;
+    margin-top: .9em;
+    letter-spacing: 2px;
+    font-family: 'Roboto Mono',
+        monospace;
+    font-weight: 400;
+}
+
+.form {
+    margin-top: 1em;
+    margin-bottom: 2rem;
+}
+
+.input_task {
+    border: none;
+    outline: none;
+    background: var(--ash_color);
+    border-radius: 5px 0 0 5px;
+    font-size: 1.5rem;
+    padding: .6rem 1rem;
+    box-shadow: inset 2px 2px 5px rgba(247, 247, 247, 0.719), rgba(0, 0, 0, .4);
+    width: 80%;
+}
+
+.input_task::placeholder {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+
+}
+
+
+
+.submit {
+    background-color: var(--voilet);
+    text-transform: capitalize;
+    color: var(--white_one);
+    font-size: 1.5rem;
+    padding: .6rem 1.3rem;
+    border: none;
+    outline: none;
+    margin-left: -.3rem;
+    border-radius: 0 5px 5px 0;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all ease-in-out .25s;
+}
+
+.submit:hover {
+    opacity: .9;
+}
+
+.single_item {
+    box-shadow: inset 3px 2px 2px rgba(216, 215, 215, 0.5), 1px 1px 5px rgba(112, 110, 110, 0.5);
+    margin-bottom: 2em;
+    padding: 2rem 3rem;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.item_title {
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-family: 'Sometype Mono',
+        monospace;
+}
+
+.icon_container a,
+.icon_container button {
+    display: inline-block;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+
+.edit_btn {
+    stroke: var(--greenColor);
+    width: 20px;
+}
+
+.delete_btn {
+    stroke: var(--redColor);
+    width: 20px;
+    fill: var(--redColor);
+    border: none;
+
+}
+
+/* .clear_all {
+    background-color: transparent;
+    color: var(--redColor);
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    cursor: pointer;
+} */
+
+.no_task {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: 'Roboto Mono',
+        monospace;
+    font-weight: 500;
+
+}
+
+@media (max-width: 760px) {
+    .main_container {
+        width: 95%;
+    }
+
+
+}

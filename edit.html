@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="edit.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="task_details">
+            <h4 class="page_title">
+                edit Task
+            </h4>
+
+            <form action="" class="edit_form">
+                <p class="alert_message"></p>
+                <div class="form_control">
+                    <label>
+                        TaskId
+                    </label>
+                    <p class="id_display"></p>
+                </div>
+                <div class="form_control">
+                    <label for="task">Name</label>
+                    <input type="text" name="task" id="task" class="edit_input">
+
+                </div>
+                <div class="form_control">
+                    <label>completed</label>
+                    <input type="checkbox" name="completed" id="completed" class="check_input">
+                </div>
+                <button type="submit" class="edit_btn">
+                    edit
+                </button>
+            </form>
+
+        </div>
+
+
+        <a href="Index.html" class="back_home"> back to task</a>
+
+    </div>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="edit.js"></script>
+</body>
+
+</html>
